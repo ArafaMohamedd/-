@@ -79,6 +79,13 @@ flutter:
     - family: Caveat
       fonts:
         - asset: fonts/Caveat/Caveat-Regular.ttf
+    - family: lora
+      fonts:
+        - asset: fonts/lora/Lora-Regular.ttf
+    - family: Shantell
+      fonts:
+        - asset: fonts/Shantell/ShantellSans-Regular.ttf
+
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

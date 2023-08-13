@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iti/task3/task3.dart';
+import 'package:iti/task4/quiz.dart';
 
 void main() {
   runApp(const quiz_app());
@@ -12,7 +12,7 @@ class quiz_app extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: login(),
+      home: quiz(),
     );
   }
 }
