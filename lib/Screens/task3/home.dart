@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:iti/task3/login%20screen.dart';
+import 'package:iti/Screens/task3/login%20screen.dart';
 
 
 
-class login extends StatelessWidget {
+class home extends StatelessWidget {
   
 
   // This widget is the root of your application.

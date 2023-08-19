@@ -1,12 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:iti/Screens/task3/home.dart';
 
-void main() {
-  runApp(const MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class wall extends StatelessWidget {
+
 
   // This widget is the root of your application.
   @override
@@ -51,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Text('we are creative enjoy Quiz App', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white, fontFamily: 'Caveat'),),
               SizedBox(height: 250,),
               ElevatedButton(
-                onPressed: (){},
+                onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => home()));},
                 child: Text('start',style: TextStyle(fontSize: 20,),),
                 style: ElevatedButton.styleFrom(primary: Colors.green, padding: EdgeInsets.symmetric(horizontal: 160, vertical: 1), ),
               ),

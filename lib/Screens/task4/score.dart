@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:iti/task4/quiz.dart';
+import 'package:iti/Screens/task3/home.dart';
+import 'package:iti/Screens/task3/login%20screen.dart';
+import 'package:iti/Screens/task4/quiz.dart';
 
 class ScoreScreen extends StatelessWidget {
   const ScoreScreen({Key? key}) : super(key: key);
@@ -25,7 +27,7 @@ class ScoreScreen extends StatelessWidget {
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(Colors.blueGrey)
             ),
-              onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => quiz()));},
+              onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => home()));},
     child: Text("Reset quiz", style: TextStyle(fontSize: 50,fontFamily: 'lora'),)
           ),
           SizedBox(height: 15,)
