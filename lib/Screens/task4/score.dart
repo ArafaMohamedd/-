@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:iti/Global/quiz_data.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:iti/Screens/category_screen.dart';
+import 'package:iti/Screens/task2.dart';
 import 'package:iti/Screens/task3/home.dart';
 import 'package:iti/Screens/task3/login%20screen.dart';
 import 'package:iti/Screens/task4/quiz.dart';
 
-class ScoreScreen extends StatelessWidget {
-  const ScoreScreen({Key? key}) : super(key: key);
+class ScoreScreen extends StatefulWidget {
+  final int totalScore;
+  final int totalNumOfQuistion;
 
+  ScoreScreen({super.key, required this.totalScore, required this.totalNumOfQuistion});
+
+  @override
+  State<ScoreScreen> createState() => _ScoreScreenState();
+}
+
+class _ScoreScreenState extends State<ScoreScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,24 +26,31 @@ class ScoreScreen extends StatelessWidget {
         children: [SizedBox(height: 15,),
           Column(
             children: [
-              Row(mainAxisAlignment: MainAxisAlignment.center,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Hello ,", style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold, fontFamily: "Shantell"),),
-                  TextButton(onPressed: (){}, child: Text("Arafa", style: TextStyle(fontSize: 28, fontFamily: "Shantell"),))
+                  TextButton(onPressed: (){}, child: Text("${userNameControler.text}", style: TextStyle(fontSize: 28, color: Colors.green,),))
                 ],
               ),
-              Text("Your Score is T/T",style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, fontFamily: "Shantell"))
+              Text(
+                  "Your Score is ${widget.totalScore}/${widget.totalNumOfQuistion}",
+                  style: TextStyle(
+                      fontSize: 26,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: "Shantell")),
             ],
           ),
           TextButton(
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(Colors.blueGrey)
             ),
-              onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => home()));},
-    child: Text("Reset quiz", style: TextStyle(fontSize: 50,fontFamily: 'lora'),)
+              onPressed: (){Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (BuildContext context) => CategoryScreen()),(Route<dynamic> route) => false,);},
+
+              child: Text("Reset quiz", style: TextStyle(fontSize: 50,fontFamily: 'lora'),)
           ),
           SizedBox(height: 15,)
-          
+
         ],
       ),
     );
