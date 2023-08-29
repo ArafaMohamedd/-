@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:iti/Screens/task4/quiz.dart';
+import 'package:iti/Screens/quiz.dart';
 
 import 'Global/quiz_data.dart';
 

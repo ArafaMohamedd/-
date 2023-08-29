@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:iti/Ctegory_Container.dart';
 import 'package:iti/Screens/category_screen.dart';
-import 'package:iti/Screens/task2.dart';
-import 'package:iti/Screens/task3/home.dart';
-import 'package:iti/Screens/task3/login%20screen.dart';
-import 'package:iti/Screens/task4/quiz.dart';
+import 'package:iti/Screens/opening screen.dart';
+import 'package:iti/Screens/home.dart';
+import 'package:iti/Screens/login%20screen.dart';
+import 'package:iti/Screens/quiz.dart';
 
 import 'Global/quiz_data.dart';
 
@@ -22,7 +22,7 @@ class quiz_app extends StatelessWidget {
     var categoryMap = dataList[0];
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CategoryScreen(),
+      home: wall(),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iti/Screens/category_screen.dart';
-import 'package:iti/Screens/task4/quiz.dart';
+import 'package:iti/Screens/quiz.dart';
 
 
 class loginPage extends StatelessWidget {
@@ -107,12 +107,12 @@ class loginPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 170),
+                padding: EdgeInsets.only(left: 150),
                 child: Row(
                   children: [
                     Text("New to quizz app?"),
                     Padding(
-                      padding: EdgeInsets.only(left: 8),
+                      padding: EdgeInsets.only(left: 2),
                       child: TextButton(
                         onPressed: () {},
                         child: Text(
@@ -155,7 +155,7 @@ class loginPage extends StatelessWidget {
                 style: TextStyle(color: Colors.grey),
               ),
               Padding(
-                padding: EdgeInsets.all(10),
+                padding: EdgeInsets.all(8),
                 child: Row(
                   children: [
                     Checkbox(
@@ -167,7 +167,7 @@ class loginPage extends StatelessWidget {
                       child: Text('Remember me'),
                     ),
                     SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.2,
+                      width: MediaQuery.of(context).size.width *0.1/0.8,
                     ),
                     TextButton(
                         onPressed: () {},
